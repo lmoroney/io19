@@ -45,8 +45,7 @@ class MainActivity : AppCompatActivity() {
         outputVal.order(ByteOrder.nativeOrder())
         tflite.run(inputVal, outputVal)
         outputVal.rewind()
-        var f:Float = outputVal.getFloat()
-        var x:Int = 1
+        var prediction:Float = outputVal.getFloat()
     }
 
     private fun loadModelfile(activity: Activity):MappedByteBuffer{
